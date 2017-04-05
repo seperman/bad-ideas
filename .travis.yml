@@ -1,0 +1,16 @@
+language: python
+
+python:
+  - "3.4"
+  - "3.5"
+  - "3.6"
+
+sudo: false
+
+install:
+  - pip install coveralls bad-ideas
+
+script: coverage run --source bad setup.py test
+
+after_success:
+  - coveralls
