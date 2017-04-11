@@ -1,8 +1,9 @@
 # Bad Ideas
 ### *It is a good idea to install bad ideas!*
 
-Bad ideas include a collection of bad Python ideas.
-This package is prepared for PyCon 2017 talk: [Magic Method, on the wall, who, now, is the `__fairest__` one of all?](https://us.pycon.org/2017/schedule/presentation/486/)
+Bad ideas include a collection of bad Python 3 ideas. This package is not compatible with Python 2.
+
+Bad Ideas are prepared for PyCon 2017 talk: [Magic Method, on the wall, who, now, is the `__fairest__` one of all?](https://us.pycon.org/2017/schedule/presentation/486/). If you have any bad ideas that you want to be added here, let me know!
 
 # Disclaimer
 
@@ -61,6 +62,7 @@ Avoid the carpal tunnels
 ```
 
 ## Undeletable
+Need some memory leaking? Subclass the Undeletable to introduce "persistent" objects that won't go away!
 
 ```py
 >>> from bad import Undeletable
@@ -68,7 +70,20 @@ Avoid the carpal tunnels
 >>> del obj
 You can't delete me!
 >>> obj
-blah blah
+<undeletable:4127530384>
+```
+
+Note that you can have many references to the same object. You can still delete all the references except the last one:
+
+```py
+>>> obj2 = obj
+>>> del obj2
+>>> obj2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'obj2' is not defined
+>>> obj
+<undeletable:4127530384>
 ```
 
 # Contribute
