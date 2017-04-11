@@ -11,7 +11,7 @@ This code is for educational purposes ONLY. Use it at your own risk.
 
 # Install
 
-`pip install bad_ideas`
+`pip install bad-ideas`
 
 # Usage
 
