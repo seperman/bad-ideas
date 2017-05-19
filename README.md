@@ -3,7 +3,9 @@
 
 Bad ideas include a collection of bad Python 3 ideas. This package is not compatible with Python 2.
 
-Bad Ideas are prepared for PyCon 2017 talk: [Magic Method, on the wall, who, now, is the `__fairest__` one of all?](https://us.pycon.org/2017/schedule/presentation/486/). If you have any bad ideas that you want to be added here, let me know!
+Bad Ideas are prepared for PyCon 2017 talk: [Magic Method, on the wall, who, now, is the `__fairest__` one of all?](https://us.pycon.org/2017/schedule/presentation/486/). You can read the proposal for this talk on the [Zepworks blog](http://zepworks.com/blog/magic-method-on-the-wall/)
+
+If you have any bad ideas that you want to be added here, let me know!
 
 # Disclaimer
 
@@ -16,7 +18,7 @@ This code is for educational purposes ONLY. Use it at your own risk.
 # Usage
 
 ## Type less by in-place editing of numbers
-Avoid the carpal tunnels
+Avoid the carpal tunnels, use mutable integers!
 
 ```py
 >>> from bad import number
