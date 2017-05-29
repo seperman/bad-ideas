@@ -13,7 +13,7 @@ except:
     long_description = "Bad Ideas for Python!"
 
 setup(name='bad-ideas',
-      version='0.0.1',
+      version='0.0.2',
       description='Pythonic Redis Client.',
       url='https://github.com/seperman/bad-ideas',
       download_url='https://github.com/seperman/bad-ideas/tarball/master',
@@ -23,6 +23,7 @@ setup(name='bad-ideas',
       packages=['bad'],
       zip_safe=False,
       test_suite="tests",
+      tests_require=['pytest'],
       long_description=long_description,
       classifiers=[
           "Intended Audience :: Developers",

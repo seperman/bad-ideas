@@ -8,9 +8,8 @@ To run the test, run this in the this of repo:
     python -m unittest discover
 
 To run a specific test, run this from the root of repo:
-    python -m unittest tests.tests.NumberTestCase.test1
+    python -m unittest tests.tests.Number.test1
 """
-import unittest
 import logging
 from bad import number, filtered, grep, Undeletable
 
@@ -26,7 +25,7 @@ for Python jobs.
 """
 
 
-class NumberTestCase(unittest.TestCase):
+class TestNumber:
 
     def test_add(self):
         num = number(10)
@@ -69,15 +68,21 @@ class NumberTestCase(unittest.TestCase):
         assert num == .2
 
 
-class FilteredTestCase(unittest.TestCase):
+class TestFiltered:
 
     def test_filter(self):
         foo = [1, 2, 3, 5, 6, 7]
         result = filtered(lambda x: x % 3 == 0, foo)
         assert result == [3, 6]
 
+    def test_filter_iter_after_printing(self):
+        foo = [1, 2, 3, 5, 6, 7]
+        result = filtered(lambda x: x % 3 == 0, foo)
+        assert result == [3, 6]
+        assert [i for i in result] == [3, 6]
 
-class GrepTestCase(unittest.TestCase):
+
+class TestGrep:
 
     def test_grep(self):
         found = LINES | grep('Python')
@@ -89,7 +94,7 @@ class GrepTestCase(unittest.TestCase):
         assert found == ['checkout jobs.python.org', 'for python jobs.']
 
 
-class UndeletableTestCase(unittest.TestCase):
+class TestUndeletable:
 
     def test_delete(self):
         undeletable = Undeletable()
