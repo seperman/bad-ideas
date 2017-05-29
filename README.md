@@ -1,4 +1,5 @@
 # Bad Ideas
+
 ### *It is a good idea to install bad ideas!*
 
 Bad ideas include a collection of bad Python 3 ideas. This package is not compatible with Python 2.
