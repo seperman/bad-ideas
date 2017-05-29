@@ -1,5 +1,8 @@
 # Bad Ideas
 
+![License](https://img.shields.io/pypi/l/bad-ideas.svg?version=latest)
+[![Build Status](https://travis-ci.org/seperman/bad-ideas.svg?branch=master)](https://travis-ci.org/seperman/bad-ideas)
+
 ### *It is a good idea to install bad ideas!*
 
 Bad ideas include a collection of bad Python 3 ideas. This package is not compatible with Python 2.
