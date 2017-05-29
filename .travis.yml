@@ -10,7 +10,7 @@ sudo: false
 install:
   - pip install pytest-cov bad-ideas
 
-script: pytest tests/ --cov=bad
+script: py.test tests/ --cov=bad
 
 after_success:
   - codecov
